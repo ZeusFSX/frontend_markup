@@ -1,5 +1,5 @@
 <template>
-    <p @mouseup="selectedEvent" >{{text}}</p>
+    <p @mouseup="selectedEvent" v-html="text" >{{text}}</p>
 </template>
 
 <script>
@@ -12,7 +12,8 @@ export default {
     },
     data () {
         return {
-            text: this.article_text
+            text: this.article_text,
+            offset: 0
         }
     },
     methods: {
@@ -24,7 +25,8 @@ export default {
                     let selectedText = selectedArea.toString();
                     console.log(start, end, selectedText)
 
-                    this.text = this.text.slice(0, start) + "<span v-html=\"html\" >" + selectedText + "</span>" + this.text.slice(end)
+                    this.text = this.text.slice(0, start + this.offset) + "<span style=\"background-color: coral;\">" + selectedText + "</span>" + this.text.slice(end + this.offset)
+                    this.offset += 46
                 }
                 selectedArea.empty()
             }
