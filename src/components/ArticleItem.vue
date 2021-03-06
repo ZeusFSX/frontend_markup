@@ -1,7 +1,7 @@
 <template>
     <div>
         <h3>{{article.title}}</h3>
-        <ArticleText v-bind:text="article.text" />
+        <ArticleText v-bind:article_text="article.text" />
         <p>{{article.language}}</p>
         <p>{{article.tonality}}</p>
     </div>   
@@ -9,6 +9,8 @@
 
 <script>
 import ArticleText from '@/components/ArticleText'
+
+
 
 export default {
     props: {
