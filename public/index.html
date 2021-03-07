@@ -4,7 +4,39 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="">
+    <style>
+      ner-per {
+        background-color: rgb(240, 146, 146);
+        border: 1px solid rgb(240, 146, 146);
+        border-radius: 7px;
+      }
+      ner-loc {
+        background-color: rgb(175, 226, 93);
+        border: 1px solid rgb(175, 226, 93);
+        border-radius: 7px;
+      }
+      ner-org {
+        background-color: rgb(92, 229, 247);
+        border: 1px solid rgb(92, 229, 247);
+        border-radius: 7px;
+      }
+      ner-date {
+        background-color: rgb(203, 120, 252);
+        border: 1px solid rgb(203, 120, 252);
+        border-radius: 7px;
+      }
+      ner-nat {
+        background-color: rgb(243, 187, 84);
+        border: 1px solid rgb(243, 187, 84);
+        border-radius: 7px;
+      }
+      ner-title {
+        background-color: rgb(255, 241, 43);
+        border: 1px solid rgb(255, 241, 43);
+        border-radius: 7px;
+      }
+    </style>
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>

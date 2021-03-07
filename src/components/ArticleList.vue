@@ -1,8 +1,12 @@
 <template>
     <div>
-        <ArticleItem :article="article" :key="article.id" />
-        <button v-on:click="prev_article">PREV</button>
-        <button v-on:click="next_article">NEXT</button>
+        <ArticleItem :article="article" :key="article.id" :instrument="instrument"/>
+        <b-button-group>
+            <b-button class="m-sm-4" variant="success" v-on:click="save_article">Save Article</b-button>
+        </b-button-group>
+        <b-button-group>
+            <b-button class="m-sm-4" variant="primary" v-on:click="next_article">Next Article</b-button>
+        </b-button-group>
     </div>
 </template>
 
@@ -11,7 +15,7 @@ import ArticleItem from '@/components/ArticleItem'
 
 
 export default {
-    props: ['articles', 'current_article'],
+    props: ['articles', 'current_article', 'instrument'],
     components: {
         ArticleItem
     },
@@ -29,21 +33,12 @@ export default {
             }
             this.article = this.articles[this.current_counter]
         }, 
-        prev_article: function(){
-            this.current_counter -= 1
-            if (this.current_counter < 0) {
-                this.current_counter= this.articles.length - 1
-            }
-            this.article = this.articles[this.current_counter]
+        save_article: function(){
         }
 
     }
 }
 </script>
 <style scoped>
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+
 </style>

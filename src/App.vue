@@ -1,9 +1,19 @@
 <template>
   <div id="app">
-    <h1>Markup Application</h1>
+    <navbar/>
     <router-view/>
   </div>
 </template>
+
+<script>
+import Navbar from '@/components/Navbar'
+
+export default {
+  components: {
+    Navbar
+  }
+}
+</script>
 
 <style>
 #app {
@@ -12,6 +22,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  align-self: center;
 }
+
+
 </style>
