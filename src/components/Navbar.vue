@@ -6,8 +6,8 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
+    <ul class="navbar-nav mr-auto" v-if="show">
+      <li class="nav-item" >
         <router-link class="nav-link" to="/"> Home </router-link>
       </li>
       <li class="nav-item">
@@ -20,3 +20,9 @@
   </div>
 </nav> 
 </template>
+
+<script>
+export default {
+    props: ["show"],
+}
+</script>

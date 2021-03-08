@@ -3,11 +3,11 @@
         <h3 class="text-left">{{article.title}}</h3>
         <p class="text-left" @mouseup="selectedEvent" v-html="text"></p>
         <div class="row">
-            <div class="col">
-                <b-form-select name="language" v-model="language" :options="lang_options"></b-form-select>
+            <div class="col mx-auto">
+                <b-form-select name="language" v-model="language" :options="lang_options" v-on:change="change_language"></b-form-select>
             </div>
-            <div class="col">
-                <b-form-select name="tonality" v-model="tonality" :options="sentimental_options"></b-form-select>
+            <div class="col mx-auto">
+                <b-form-select name="tonality" v-model="tonality" :options="sentimental_options" v-on:change="change_tonality"></b-form-select>
             </div>
         </div>
         
@@ -57,9 +57,17 @@ export default {
 
                     this.text = this.text.replaceAll(selectedText, `<${this.instrument}>` + selectedText + `</${this.instrument}>`);
                     selectedArea.empty()
+                    this.$emit("save_text", this.text)
                 }
                 
             },
+        change_language: function() {
+            this.$emit("save_lang", this.language)
+
+        },
+        change_tonality: function() {
+            this.$emit('save_tonality', this.tonality)
+        }
         
     }
 }
