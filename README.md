@@ -6,6 +6,12 @@ Student: _Korovii Oleksandr KV-01mp_
 
 [Google Doc](https://docs.google.com/document/d/1VM6Jq6C4zCgi08Tnr0BHD8GCCwgM7r3vdQ_VPPCFwwg/edit?usp=sharing)
 
+***Laboratory work №2 ***
+
+Student: _Korovii Oleksandr KV-01mp_
+
+[Google Doc](https://docs.google.com/document/d/1xW-SwDrwidJpPdiUvA4_AgChT65Ta7ikANgi0CMeXWs/edit?usp=sharing)
+
 ## Project setup
 ```
 npm install
