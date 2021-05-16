@@ -7,19 +7,19 @@
                 <tbody>
                 <tr>
                     <td>Name:</td>
-                    <td>{{username}}</td>
+                    <td id="info-username">{{username}}</td>
                 </tr>
                 <tr>
                     <td>Email:</td>
-                    <td>{{email}}</td>
+                    <td id="info-email">{{email}}</td>
                 </tr>
                 <tr>
                     <td>Birthday:</td>
-                    <td>{{birthday}}</td>
+                    <td id="info-birthday">{{birthday}}</td>
                 </tr>
                 <tr>
                     <td>Gender:</td>
-                    <td>{{gender}}</td>
+                    <td id="info-gender">{{gender}}</td>
                 </tr>
                 </tbody>
             </table>

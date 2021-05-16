@@ -70,9 +70,12 @@ export default {
     methods: {
         submit() {
             if (this.password !== this.confirm_password) {
-                alert("Passwords should be the same")
+                return false;
             }
-            // add authorization
+            else {
+                return true;
+            }
+            
         }
     }
 }
